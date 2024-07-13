@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Countdown Timer for L Plates</title>
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+	</style>
+	<style type="text/css">
+		/* see if you can see any similarities at example.com */
+		
+		body {
+      	  	background-color: #f0f0f2;
+      	 	margin: 0;
+       	 	padding: 0;
+   		}
+
+		div {
+     	  width: 600px;
+     	  margin: 5em auto;
+     	  padding: 2em;
+     	  background-color: #fdfdff;
+      	  border-radius: 0.5em;
+      	  box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+  	    }
+
+		p {
+			font-size: 25px;
+			font-family: "Raleway", sans-serif;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<p id="timer"></p>	
+	</div>
+
+<script>
+	//A lot of this script was written in W3Schools
+var countDownDate = new Date("july 16, 2030 10:30:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+    
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+ 
+    
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</body>
+</html>

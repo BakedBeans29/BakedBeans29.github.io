@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Countdown Timer for L Plates</title>
 	<style>
-	@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 	</style>
 	<style type="text/css">
 		/* see if you can see any similarities at example.com */
-		
+
 		body {
       	  	background-color: #f0f0f2;
       	 	margin: 0;
@@ -58,7 +58,7 @@ var x = setInterval(function() {
     
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("timer").innerHTML = "EXPIRED";
+    document.getElementById("timer").innerHTML = "This event has already happened.";
   }
 }, 1000);
 </script>
